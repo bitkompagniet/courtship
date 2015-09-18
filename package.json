@@ -1,6 +1,6 @@
 {
   "name": "courtship",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A recursive file indexer that include stat info and provides intercept functionality.",
   "main": "index.js",
   "scripts": {
