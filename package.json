@@ -1,10 +1,10 @@
 {
   "name": "courtship",
   "version": "0.1.0",
-  "description": "",
+  "description": "A recursive file indexer that include stat info and provides intercept functionality.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

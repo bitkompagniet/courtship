@@ -61,6 +61,10 @@ describe("Indexer", function() {
 			return i.index().then(function(result) {
 
 				result.should.be.an("array");
+
+				result.filter(function(item) { return item.stat.isDirectory(); }).length.should.be.above(0);
+				result.filter(function(item) { return item.stat.isFile(); }).length.should.be.above(0);
+
 				var first = result[0];
 
 				first.should.be.an("object");
@@ -126,7 +130,7 @@ describe("Indexer", function() {
 			var i = indexer("./");
 
 			i.use(function(file) {
-				file.remove = true;
+				return false;
 			});
 
 			return i.index().then(function(result) {
